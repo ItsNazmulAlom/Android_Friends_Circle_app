@@ -276,7 +276,7 @@ public class SignUpActivity extends AppCompatActivity {
 
                     Log.d("RESPONSE", response);
 
-                    if (response.equals("successs")) {
+                    if (response.equals("success")) {
                         loading.dismiss();
                         Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
                         Toast.makeText(SignUpActivity.this, "Sign up successful", Toast.LENGTH_SHORT).show();

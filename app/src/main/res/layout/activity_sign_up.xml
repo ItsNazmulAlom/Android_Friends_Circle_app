@@ -103,6 +103,7 @@
                 android:background="@drawable/round_backgroud"
                 android:drawableRight="@drawable/arrow_down"
                 android:hint="Division"
+                android:focusable="false"
                 android:inputType="text"
                 android:padding="10dp"
                 android:textColor="@android:color/white"

@@ -51,7 +51,7 @@ public class AddFriendActivity extends AppCompatActivity {
         txtCurrentJob = findViewById(R.id.txt_current_job);
         txtPosition = findViewById(R.id.txt_position);
 
-        btnAdd = findViewById(R.id.btn_add);
+        btnAdd = findViewById(R.id.btn_edit);
 
 
         getSupportActionBar().setHomeButtonEnabled(true); //for back button

@@ -153,7 +153,7 @@
             android:padding="5dp">
 
             <Button
-                android:id="@+id/btn_add"
+                android:id="@+id/btn_edit"
                 android:layout_width="150dp"
                 android:layout_height="match_parent"
                 android:background="@drawable/ed_design"
