@@ -31,7 +31,7 @@ public class Friends_Details_Activity extends AppCompatActivity {
       txtCell = findViewById(R.id.txt_cell);
       txtEmail = findViewById(R.id.txt_email);
       txtUniversity = findViewById(R.id.txt_university);
-      txtCompany = findViewById(R.id.txt_position);
+      txtCompany = findViewById(R.id.txt_current_job);
       txtPosition = findViewById(R.id.txt_position);
 
       //button initialized
@@ -50,13 +50,30 @@ public class Friends_Details_Activity extends AppCompatActivity {
         txtCompany.setEnabled(false);
         txtPosition.setEnabled(false);
 
-
+        getID = getIntent().getExtras().getString("id");
         getName= getIntent().getExtras().getString("name");
         getCell = getIntent().getExtras().getString("cell");
         getEmail = getIntent().getExtras().getString("email");
         getUniversity = getIntent().getExtras().getString("university");
         getCompany =getIntent().getExtras().getString("company");
         getPosition = getIntent().getExtras().getString("position");
+        getUser_user_cell = getIntent().getExtras().getString("user_user_cell");
+//         //
+//        Log.d("getID",getID);
+//        Log.d("getName",getName);
+
+        getSupportActionBar().setHomeButtonEnabled(true); //for back button
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);//for back button
+        getSupportActionBar().setTitle("Friend Details");//for actionbar title
+
+
+
+        txtName.setText(getName);
+        txtCell.setText(getCell);
+        txtEmail.setText(getEmail);
+        txtUniversity.setText(getUniversity);
+        txtCompany.setText(getCompany);
+        txtPosition.setText(getPosition);
 
 
 

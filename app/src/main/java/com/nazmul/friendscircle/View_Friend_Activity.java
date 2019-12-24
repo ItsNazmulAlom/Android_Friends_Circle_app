@@ -230,16 +230,27 @@ public class View_Friend_Activity extends AppCompatActivity {
 
         FriendsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 Intent intent = new Intent(View_Friend_Activity.this,Friends_Details_Activity.class);
-                intent.putExtra("id",userID);
-                intent.putExtra("name",userName);
-                intent.putExtra("cell",userCell);
-                intent.putExtra("email",userEmail);
-                intent.putExtra("universtiy",userUniversity);
-                intent.putExtra("company",userCompany);
-                intent.putExtra("position",userPosition);
-                intent.putExtra("user_user_cell",user_User_cell);
+                intent.putExtra("id",userID[position]);
+                intent.putExtra("name",userName[position]);
+                intent.putExtra("cell",userCell[position]);
+                intent.putExtra("email",userEmail[position]);
+                intent.putExtra("universtiy",userUniversity[position]);
+                intent.putExtra("company",userCompany[position]);
+                intent.putExtra("position",userPosition[position]);
+                intent.putExtra("user_user_cell",user_User_cell[position]);
+
+
+                //for logcat
+                Log.d("ID",userID[position]);
+                Log.d("NAME",userName[position]);
+                Log.d("CELL",userCell[position]);
+                Log.d("EMAIL",userEmail[position]);
+                Log.d("universtiy",userUniversity[position]);
+                Log.d("company",userCompany[position]);
+                Log.d("position",userPosition[position]);
+                Log.d("user_user_cell",user_User_cell[position]);
 
 
                 startActivity(intent);
