@@ -94,6 +94,9 @@ public class AddFriendActivity extends AppCompatActivity {
     }
 
     private void SaveFriend(){
+
+        final String user_cell = getUserCell;
+
         final String name = txtName.getText().toString().trim();
         final String cell = txtCell.getText().toString().trim();
         final String email = txtEmail.getText().toString().trim();
@@ -178,13 +181,18 @@ public class AddFriendActivity extends AppCompatActivity {
                 protected Map<String,String> getParams()throws AuthFailureError{
                     Map<String,String> params = new HashMap<>();
 
-                    params.put(Constant.KEY_USER_CELL, getUserCell);
+                    params.put(Constant.KEY_USER_CELL, user_cell);
                     params.put(Constant.KEY_NAME, name);
                     params.put(Constant.KEY_CELL, cell);
                     params.put(Constant.KEY_EMAIL, email);
                     params.put(Constant.KEY_UNIVERSITY,university);
                     params.put(Constant.KEY_CURRENT_JOB,currentjob);
                     params.put(Constant.KEY_POSITION,position);
+
+
+                    Log.d("KEYUserCEll",user_cell);
+                    Log.d("NAME",name);
+
 
                     return params;
                         }

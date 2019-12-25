@@ -27,6 +27,9 @@ public class Constant {
 
     public static final String FRIEND_ADD_URL = MAIN_URL+"/friendCircle/save_friend.php";
 
+
+    public static final String FRIEND_UPDATE = MAIN_URL+"/friendCircle/update_friend.php";
+
 //    txtName = findViewById(R.id.txt_name);
 //    txtCell = findViewById(R.id.txt_cell);
 //    txtEmail = findViewById(R.id.txt_email);

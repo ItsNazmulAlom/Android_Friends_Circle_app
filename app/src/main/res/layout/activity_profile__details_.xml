@@ -12,13 +12,13 @@
     <LinearLayout
         android:id="@+id/layout8"
         android:layout_width="match_parent"
-        android:layout_height="90dp"
+        android:layout_height="50dp"
         android:orientation="vertical">
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="50dp"
             android:src="@drawable/man" />
     </LinearLayout>
 
@@ -31,16 +31,18 @@
         <LinearLayout
             android:id="@+id/layout6"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="90dp"
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/profile_ID"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="53dp"
                 android:gravity="center"
                 android:text="Profile"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="@android:color/white" />
+
         </LinearLayout>
 
         <LinearLayout

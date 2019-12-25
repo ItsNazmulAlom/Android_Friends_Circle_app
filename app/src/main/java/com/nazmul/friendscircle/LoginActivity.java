@@ -107,6 +107,7 @@ public class LoginActivity extends AppCompatActivity {
                         Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                         startActivity(intent);
                         Toast.makeText(LoginActivity.this,"Login successfull",Toast.LENGTH_SHORT).show();
+                        Log.d("CellPHOne",cell);
 
 
                     } else if (response.equals("failure")) {
