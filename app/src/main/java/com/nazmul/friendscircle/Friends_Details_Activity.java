@@ -192,9 +192,6 @@ public class Friends_Details_Activity extends AppCompatActivity {
 
                 if (get_cell.equals(getUser_user_cell)){
 
-
-
-
                     if (txtName.isEnabled()){
                         AlertDialog.Builder builder= new AlertDialog.Builder(Friends_Details_Activity.this);
                         builder.setIcon(R.drawable.wait_icon)
@@ -363,8 +360,83 @@ public class Friends_Details_Activity extends AppCompatActivity {
 
       public void  FriendDeleteFromServer(){
 
+        loading = new ProgressDialog(this);
+        loading.setIcon(R.drawable.wait_icon);
+        loading.setTitle("Delete");
+        loading.setMessage("Please wait ..");
+        loading.show();
 
-      }
+        String URL = Constant.FRIEND_DELETE;
+
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                // for log card check
+
+                Log.d("RESPONSE", response);
+
+                if (response.equals("success")) {
+                    loading.dismiss();
+                    Intent intent = new Intent(Friends_Details_Activity.this, View_Friend_Activity.class);
+                    Toast.makeText(Friends_Details_Activity.this, "Friend Delete Successfully", Toast.LENGTH_SHORT).show();
+                    startActivity(intent);
+                } else if (response.equals("failure")) {
+                    loading.dismiss();
+                    Intent intent = new Intent(Friends_Details_Activity.this, View_Friend_Activity.class);
+                    Toast.makeText(Friends_Details_Activity.this, "Delete failed!", Toast.LENGTH_SHORT).show();
+                    startActivity(intent);
+
+                } else {
+                    loading.dismiss();
+                    Toast.makeText(Friends_Details_Activity.this, "Network error", Toast.LENGTH_SHORT).show();
+
+                }
+            }
+        },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(Friends_Details_Activity.this,"No internet connection",Toast.LENGTH_SHORT).show();
+                        loading.dismiss();
+                    }
+                })
+
+
+
+                    {
+
+                     @Override
+                      protected  Map<String,String> getParams() throws AuthFailureError{
+                         Map<String,String> perams = new HashMap<>();
+                         perams.put(Constant.KEY_ID,getID);
+                         Log.d("GET_ID",getID);
+
+                         //returning peramiter
+                         return perams;
+//                         @Override
+//                         protected Map<String, String> getParams() throws AuthFailureError {
+//                             Map<String, String> params = new HashMap<>();
+//                             //Adding parameters to request
+//
+//                             params.put(Constant.KEY_ID, getID);
+//
+//                             Log.d("ID", getID);
+//
+//                             //returning parameter
+//                             return params;
+
+
+
+
+
+                     }
+
+                   };
+
+        RequestQueue requestQueue = Volley.newRequestQueue(Friends_Details_Activity.this);
+        requestQueue.add(stringRequest);
+
+      }//delete friend method sesh
 
 
 

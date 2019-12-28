@@ -8,28 +8,30 @@ public class Constant {
 // main url
 
     public  static  final String MAIN_URL= "https://android.nkrit.com";
-
-
-
-/// url for signup
+    /// url for signup
     public static final String SIGNUP_URL = MAIN_URL+"/friendCircle/signup.php";
-
    // key value for signup
+// url for add friend
+
+
+    public static final String FRIEND_VIEW_URL= MAIN_URL+"/friendCircle/view_friend.php?cell=";
+    //url for view profile
+    public static final String PROFILE_VIEW_URL= MAIN_URL+"/friendCircle/view_profile.php?cell=";
+    //url for sign in
+    public static  final String SIGNIN_URL = MAIN_URL+"/friendCircle/login.php";
+
+    public static final String FRIEND_ADD_URL = MAIN_URL+"/friendCircle/save_friend.php";
+    public static final String FRIEND_UPDATE = MAIN_URL+"/friendCircle/update_friend.php";
+    public static final String FRIEND_DELETE = MAIN_URL+"/friendCircle/delete_friend.php";
+
+
+
 
     public static final String KEY_NAME = "name";
     public static final String KEY_CELL = "cell";
     public static final String KEY_GENDER = "gender";
     public static final String KEY_DIVISION = "division";
     public static final String KEY_PASSWORD = "password";
-
-
-// url for add friend
-
-    public static final String FRIEND_ADD_URL = MAIN_URL+"/friendCircle/save_friend.php";
-
-
-    public static final String FRIEND_UPDATE = MAIN_URL+"/friendCircle/update_friend.php";
-
 //    txtName = findViewById(R.id.txt_name);
 //    txtCell = findViewById(R.id.txt_cell);
 //    txtEmail = findViewById(R.id.txt_email);
@@ -42,19 +44,16 @@ public class Constant {
     public static final String KEY_POSITION = "position";
     public static final String KEY_USER_CELL = "user_cell";
 
-    //url for sign in
+    public static final String KEY_ID = "id";
+    public static final String JSON_ARRAY = "result";
 
-
-    public static  final String SIGNIN_URL = MAIN_URL+"/friendCircle/login.php";
 
 
     //url for CONTACT_VIEW_URL
     //url for contacts view
 
-    public static final String CONTACT_VIEW_URL= MAIN_URL+"/friendCircle/view_friend.php?cell=";
 
-    public static final String KEY_ID = "id";
-    public static final String JSON_ARRAY = "result";
+
 
 
     // Share preference

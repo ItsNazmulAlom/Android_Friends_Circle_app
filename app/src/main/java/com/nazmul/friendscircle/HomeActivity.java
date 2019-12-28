@@ -30,7 +30,7 @@ public class HomeActivity extends AppCompatActivity {
         btnProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this, Profile_Details_Activity.class);
+                Intent intent = new Intent(HomeActivity.this, Profile_Activity.class);
                 startActivity(intent);
             }
         });// gto to profile details

@@ -122,7 +122,7 @@ public class View_Friend_Activity extends AppCompatActivity {
         loading.show();
 
 
-        String URL = Constant.CONTACT_VIEW_URL+getCell+"&text="+text;
+        String URL = Constant.FRIEND_VIEW_URL+getCell+"&text="+text;
         Log.d("URL",URL);
 
         StringRequest stringRequest = new StringRequest(URL, new Response.Listener<String>() {
@@ -162,10 +162,12 @@ public class View_Friend_Activity extends AppCompatActivity {
 //            jsonObject = new JSONObject(response);
 //            JSONArray result = jsonObject.getJSONArray(Constant.JSON_ARRAY);
 
-            if (result.length()==0){
+
+            Log.d("count",""+result.length());
+            if (result.length() == 0){
                 Toast.makeText(View_Friend_Activity.this,"No Data Available",Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(View_Friend_Activity.this,HomeActivity.class);
-                startActivity(intent);
+//                Intent intent = new Intent(View_Friend_Activity.this,View_Friend_Activity.class);
+//                startActivity(intent);
 
 
             }

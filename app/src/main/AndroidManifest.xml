@@ -12,7 +12,7 @@
         <activity android:name=".Friends_Details_Activity"></activity>
         <activity android:name=".View_Friend_Activity" />
         <activity android:name=".AddFriendActivity" />
-        <activity android:name=".Profile_Details_Activity" />
+        <activity android:name=".Profile_Activity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".LoginActivity" />
