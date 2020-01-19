@@ -26,6 +26,8 @@ import com.android.volley.toolbox.Volley;
 import java.util.HashMap;
 import java.util.Map;
 
+import es.dmoral.toasty.Toasty;
+
 public class LoginActivity extends AppCompatActivity {
 
     EditText txtCell,txtPassword;
@@ -107,7 +109,9 @@ public class LoginActivity extends AppCompatActivity {
 
                         Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                         startActivity(intent);
-                        Toast.makeText(LoginActivity.this,"Login successfull",Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(LoginActivity.this,"Login successfull",Toast.LENGTH_SHORT).show();
+
+                        Toasty.success(LoginActivity.this, "Login Success!", Toast.LENGTH_SHORT, true).show();
                         Log.d("CellPHOne",cell);
 
 

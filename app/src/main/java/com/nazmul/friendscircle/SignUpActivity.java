@@ -26,6 +26,8 @@ import com.android.volley.toolbox.Volley;
 import java.util.HashMap;
 import java.util.Map;
 
+import static com.nazmul.friendscircle.Constant.SIGNUP_URL;
+
 public class SignUpActivity extends AppCompatActivity {
 
     EditText txtName,txtCell,txtGender,txtDivision,txtPassword;
@@ -243,7 +245,8 @@ public class SignUpActivity extends AppCompatActivity {
 
             // server a request pathabo
 
-            final StringRequest stringRequest = new StringRequest(Request.Method.POST, Constant.SIGNUP_URL, new Response.Listener<String>() {
+            final StringRequest stringRequest = new StringRequest(Request.Method.POST, SIGNUP_URL, new Response.Listener<String>() {
+
                 @Override
                 public void onResponse(String response){
 //                    Log.d("Response", response);
